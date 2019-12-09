@@ -1,0 +1,18 @@
+#Ignore folder named `youngtoddler.com`
+youngtoddler.com/
+#Ignore folder named `affiliate`
+affiliate/
+#Ignore file named `assets.zip`
+assets.zip
+#Ignore file named `db_site.zip`
+db_site.zip
+#Ignore file named `db_site.zip`
+db_site.zip
+#Ignore file named `devsbeta_blog.zip`
+devsbeta_blog.zip
+#Ignore file named `latest-dev-backup.zip`
+latest-dev-backup.zip
+#Ignore file named `NAH-Latest.zip`
+NAH-Latest.zip
+#Ignore file named `office.zip`
+office.zip

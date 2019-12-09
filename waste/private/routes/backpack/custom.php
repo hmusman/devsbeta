@@ -1,0 +1,23 @@
+<?php
+
+// --------------------------
+// Custom Backpack Routes
+// --------------------------
+// This route file is loaded automatically by Backpack\Base.
+// Routes you generate using Backpack\Generators will be placed here.
+
+Route::group([
+    'prefix'     => config('backpack.base.route_prefix', 'admin'),
+    'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
+    'namespace'  => 'App\Http\Controllers\Admin',
+], function () { // custom admin routes
+    
+    
+    CRUD::resource('portfolio', 'PortfolioCrudController');
+    CRUD::resource('about', 'AboutCrudController');
+    CRUD::resource('contact', 'ContactCrudController');
+    CRUD::resource('sidebar', 'SidebarCrudController');
+    CRUD::resource('message', 'MessageCrudController');
+    CRUD::resource('setting', 'SettingCrudController');
+    CRUD::resource('category', 'CategoryCrudController');
+}); // this should be the absolute last line of this file

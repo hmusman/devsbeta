@@ -1,0 +1,375 @@
+/*
+
+@media only screen and (max-width: 425px) {
+
+	.offcanvas-footer{
+
+	position: fixed;
+
+}	
+
+}*/
+
+#ssb-container {
+
+    position: fixed;
+
+    right: -81px;
+
+    background-color: #1AA687;
+
+    top: 30%;
+
+    z-index: 10;
+
+        -webkit-transition: all .25s ease!important;
+
+  -moz-transition: all .25s ease!important;
+
+  -ms-transition: all .25s ease!important;
+
+  -o-transition: all .25s ease!important;
+
+  transition: all .25s ease!important;
+
+    box-shadow: 0 6px 8px 0.2px rgba(64,64,64,0.24) !important;
+
+}
+
+#ssb-container:hover{
+
+	right: 0px!important;
+
+}
+
+#ssb-container ul {
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+#ssb-container ul li {
+
+    line-height: 45px;
+
+}
+
+#ssb-container ul li {
+
+    list-style: none;
+
+    margin: 0;
+
+
+
+
+
+}
+
+#ssb-container ul li p {
+
+    margin: 0;
+
+}
+
+#ssb-container ul li a.bordered {
+
+    border-bottom: 1px solid #fff;
+
+}
+
+#ssb-container ul li a {
+
+    padding: 0 15px 0 0;
+
+    display: block;
+
+    line-height: 45px;
+
+    text-align: left;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+}
+
+
+
+#ssb-container ul li span {
+
+    line-height: 45px;
+
+    width: 50px;
+
+    text-align: center;
+
+    display: inline-block;
+
+}
+
+.ep_btn{
+
+    border: 1px solid #1AA687;
+
+    background-color: #1AA687;
+
+    cursor: pointer;
+
+}
+
+.ep_btn:hover{
+
+	background-color: transparent;
+
+    box-shadow: none;
+
+    border: 1px solid #1AA687;
+
+    /*color: #1AA687;*/
+
+    border-radius: 0px;
+
+}
+
+.em_btn,.cun_btn{
+
+	/*box-shadow: 0 6px 8px 0.2px rgba(64,64,64,0.24) !important;*/
+
+    background-color: transparent;
+
+    color: #fff!important;
+
+    border: 1px solid #fff;
+
+    border-radius: 50px;
+
+}
+
+.em_btn:hover,.cun_btn:hover{
+
+	border-radius: 0;
+
+    background-color: #fff;
+
+    color: #1AA687!important;
+
+    border: 1px solid #fff;
+
+}
+
+
+
+.step .step-link{
+
+	background-color: #1AA687;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    color: #fff;
+
+}
+
+.banner_text_wrapper{
+
+	height: 100%;
+
+    /*background-color: rgba(0,0,0,0.5);*/
+
+    padding: 30px 60px!important;
+
+    max-width: 1350px;
+
+    margin: 0!important
+
+}
+
+section.position-relative.bg-center-top.bg-no-repeat.py-5{
+
+	padding: 0!important;
+
+}
+
+.navbar-nav .nav-item.active .nav-link{
+
+	color: #1AA687!important
+
+}
+
+.navbar-nav .nav-item.active .nav-link::before{
+
+	background-color: #1AA687!important;
+
+	height: 4px!important;
+
+}
+
+.navbar-nav{
+
+	margin-right: 100px;
+
+}
+
+.bg-gradient, .block-title::after, .animated-digits::after, .step .step-title::after, .btn-gradient, .btn-style-2.btn-gradient::after, .btn-style-2.btn-gradient:hover::before, .btn-style-6.btn-gradient::before, .accordion-style-3 .card-body::after, .accordion-style-3 [data-toggle='collapse'], .widget-title::after, .tag-link::before, .noUi-connect, .mobile-menu .dropdown-header::after, .blog-card .post-title::after{
+
+	background: #1AA687!important
+
+}
+
+.widget-custom-menu ul>li:hover>a, .widget-custom-menu ul>li.active>a, .widget-categories ul>li:hover>a, .widget-categories ul>li.active>a{
+
+	color: #1AA687!important
+
+}
+
+.navi-link:hover{
+
+	color: #1AA687!important
+
+}
+
+.sb-facebook:hover, .sb-facebook.hover,.sb-twitter:hover, .sb-twitter.hover,.sb-youtube:hover, .sb-youtube.hover,.sb-instagram:hover{
+
+	color: #fff!important;
+
+}
+
+.sb-style-6:hover, .sb-style-6.hover, .sb-style-7:hover, .sb-style-7.hover{
+
+	background-color: #1AA687!important;
+
+}
+
+.sb-style-6, .sb-style-7{
+
+	border-color: #1AA687!important;
+
+}
+
+.text-success{
+
+	color: #1AA687!important;
+
+}
+ a.nav-link.active {
+    border-color: #1aa687 !important;
+    background-color: #1aa687 !important;
+}
+   .breadcrumb > li.breadcrumb-item > a{
+color: #1aa687 !important;
+    }
+    .breadcrumb .breadcrumb-item::before{
+    	background-color: #1aa687 !important;
+    }
+    .nav-tabs.nav-tabs-style-2 .nav-link:hover{
+    	 border-color: #1aa687 !important;
+    }
+   .portfolio-card-body >h5  > a {
+     color: #1aa687 !important;
+   }
+   .bg-gradient-vertical, .gallery-item::before, .team-card-style-1::before, .team-card-style-2::after, .author-card .author-card-cover::after{
+   	    background: #1aa687 !important; to 
+    background: -webkit-gradient(linear, left top, left bottom, from(#1aa687), color-stop(20%, #1aa687), to(##4ac0a6)) !important;
+    background: linear-gradient(to bottom, #1aa687 0%, #1aa687 20%, #4ac0a6 100%) !important;
+   }
+   .board-members{
+padding: 0px 20px 0px 20px;
+
+   }
+   .team-thumb.d-sm-table-cell.align-middle{
+    width: 130px !important;
+   }
+   .owl-carousel .owl-dots .owl-dot.active{
+    background-color: #1aa687 !important; 
+   }
+   .custom-file-label::after{
+      background-color: #1aa687 !important; 
+   }
+   .side-heading{
+    writing-mode: tb-rl !important;
+    font-size: 28px !important;
+    margin: auto 0px auto 0px !important;
+    float: right !important;
+   }
+   .countries-wrapper::after{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 1px;
+    width: 36px;
+    height: 2px;
+    content: '';
+    background: #0152B3;
+}
+
+.portfolio-thumb>img{
+  height: 160px;
+}
+.hauto{
+    height: auto!important;
+}
+.portfolio-card{
+  border-bottom: 5px solid #0000;
+  border-radius: 20px;
+  transition: all 1s;
+}
+.portfolio-card-body >h6  > a {
+     color: #1aa687 !important;
+     font-weight: 300;
+     transition: all 0.5s;
+   }
+  .each_portfolio > .portfolio-card:hover{
+    border-bottom: 5px solid #1aa687;
+    transition: all 0.5s;
+    border-radius: 0;
+  }
+  .portfolio_heading{
+    min-height: auto;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #fff;
+  }
+  .portfolio_heading h1{
+    text-align: left;
+    text-shadow: 0px 7px 0px #ddd!important;
+  }
+  .ip_carousal .owl-stage-outer{
+    border: 2px solid #ddd;
+    height: 400px;
+  }
+  .ip_carousal.owl-carousel .owl-item img{
+    height: -webkit-fill-available;
+  }
+  .ymal_wrapper .portfolio-title > a:hover{
+    color: #343b43;
+  }
+  a.social-btn:hover{
+    background-color: #1AA687;
+  }
+  .mobile-menu .mobile-menu-link:hover, .mobile-menu .mobile-menu-link.active {
+    color: #1aa687;
+}
+.mobile-menu .mobile-menu-link.active::before{
+  background-color: #1AA687;
+}
+.video-player-button:hover{
+  color: #1AA687;
+}
+.icon-box .icon-box-icon, .icon-box .icon-box-image{
+  width: 90px;
+  height: 90px;
+  padding: 7px;
+  margin-bottom: 1rem;
+}
