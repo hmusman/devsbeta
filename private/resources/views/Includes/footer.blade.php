@@ -11,9 +11,9 @@
             </ul>
             <a class="social-btn sb-style-6 sb-facebook" href="https://www.facebook.com/devsbeta/"><i class="socicon-facebook"></i>
             </a>
-            <a class="social-btn sb-style-6 sb-twitter" href=""><i class="socicon-twitter"></i>
+            <a class="social-btn sb-style-6 sb-twitter" href="https://www.twitter.com/devsbeta/?hl=en"><i class="socicon-twitter"></i>
             <!--</a>-->
-            <a class="social-btn sb-style-6 sb-youtube" href=""><i class="socicon-youtube"></i>
+            <a class="social-btn sb-style-6 sb-linkedin" href="https://www.linkedin.com/company/devsbeta/"><i class="socicon-linkedin"></i>
             </a>
             <a class="social-btn sb-style-6 sb-instagram" href="https://www.instagram.com/devsbeta/?hl=en"><i class="socicon-instagram"></i>
             </a>

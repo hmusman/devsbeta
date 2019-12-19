@@ -13,10 +13,6 @@ class aboutusController extends Controller
    
     return view('Pages.about',compact('teamMembers'));
     }
-    public function our_services(){
-   
-    return view('Pages.services');
-    }
     public function news(){
    
     return view('Pages.news');

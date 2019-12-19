@@ -34,8 +34,6 @@ Route::group(['middleware' => ['web'], 'namespace' => 'webdevetc'], function () 
         });
 
     });
-
-
     /* Admin backend routes - CRUD for posts, categories, and approving/deleting submitted comments */
     Route::group(['prefix' => config('blogetc.admin_prefix', 'blog_admin')], function () {
 
@@ -142,7 +140,15 @@ Route::get('/about','Pages\aboutusController@index');
 Route::get('privacy-policy',function(){
     return view('Pages.privacy-policy');
 });
-Route::get('/services','Pages\aboutusController@our_services');
+
+Route::group(['prefix' => 'services'], function(){
+    Route::get('/','Pages\serviceController@our_services');
+
+    Route::get('/{slug}','Pages\serviceController@single_service');
+});
+
+
+
 Route::get('/news','Pages\aboutusController@news');
 Route::get('/help-center','Pages\aboutusController@help_center');
 Route::get('/terms-and-conditions','Pages\aboutusController@terms_conditions');
