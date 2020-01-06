@@ -22,3 +22,5 @@
 <li><a href='{{url('blog_admin')}}'><i class='fa fa-newspaper-o'></i> <span>Blog</span></a></li>
 
 <li><a href='{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}'><i class='fa fa-cog'></i> <span>Settings</span></a></li>
+
+<li><a href='{{ backpack_url('service') }}'><i class='fa fa-briefcase'></i> <span>Services</span></a></li>

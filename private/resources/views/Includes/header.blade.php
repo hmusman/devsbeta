@@ -56,7 +56,7 @@
 		.icon-box{
 		border: 3px solid #1aa687;
 		padding:30px 10px;
-		height: 300px;
+		height: 325px;
 		border-radius: 5px;
 		}
 		.icon-box:hover .icon-box-icon {
@@ -71,6 +71,46 @@
 		margin-top: 8px;
 		font-size: 13px!important;
 		}
+		.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f1f1f1;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+
+		.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		}
+		.dropdown:hover .dropdown-content {display: block;}
+		.dropdown:hover .drop {color: #1AA687;}
+		.beauty{
+			width: auto;
+			overflow-y: auto;
+			width: 300px; 
+		}
+		.dropdown-content a:hover{
+			color: #1AA687;
+		}
+		#imb{
+			background-color: white;
+		}
+		.icon-box-link{
+			color: #343b43;
+		}
+		
+		.icon-box a:hover{
+			color: #1AA687;
+		}
+		
 	</style>
 	<body>
 		<div id="ssb-container" class="ssb-btns-right ssb-anim-slide">
@@ -123,6 +163,21 @@
 							@endif
 						</div>
 					</div>
+					<div class="card">
+			            <div class="card-header"><a class="mobile-menu-link" href="{{ url('services') }}">service</a><a class="collapsed" href="#blog-submenu" data-toggle="collapse"></a></div>
+			            <div class="collapse" id="blog-submenu" data-parent="#accordion-menu">
+			              <div class="card-body">
+			                <ul>
+			                  <li class="dropdown-header">Services we provide</li>
+				                  @forelse(Helper::our_services()->services as $service)
+									<li class="dropdown-item"><a href="{{ url('services') }}/{{$service->slug}}">{{$service->title}} {{$service->subtitle}}</a></li>
+								  @empty
+									<div class='alert alert-danger'>No services yet</div>
+		            			  @endforelse
+			                </ul>
+			              </div>
+			            </div>
+			          </div>
 					<div class="card">
 						<div class="card-header">
 							@if(Request::is('contactus'))
@@ -185,6 +240,18 @@
 								<a class="nav-link" href="{{url('portfolio')}}">Portfolio</a>
 								@endif
 							</li>
+							<div class="dropdown">
+								<li class="nav-item mega-dropdown-toggle"><a class="nav-link drop" href="{{ url('services') }}">Services</a>
+								</li>
+								<div class="dropdown-content beauty">
+									@forelse(Helper::our_services()->services as $service)
+										<a href="{{ url('services') }}/{{$service->slug}}">{{$service->title}} {{$service->subtitle}}</a>
+									@empty
+										 <div class='alert alert-danger'>No services yet.</div>
+                    				@endforelse
+								</div>
+							</div>
+							
 							<!-- Blog-->
 							@if(Request::is('contactus'))
 							<li class="nav-item mega-dropdown-toggle active"><a class="nav-link" href="{{url('contactus')}}">Contact</a>

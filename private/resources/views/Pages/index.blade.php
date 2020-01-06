@@ -22,70 +22,79 @@
       <div class="row py-3">
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Web.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Web.png"></div>
             <h3 class="icon-box-title">Web</h3>
             <span>DESIGN & DEVELOPMENT</span>
             <p class="icon-box-text text-sm">Need website or web application that meets your business goals ? We can create responsive designs & develop professional websites</p>
+            <a href="{{ url('services/web-design-and-development') }}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Design.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Design.png"></div>
             <h3 class="icon-box-title">DESIGN</h3>
             <span>BRANDING & IDENTITY</span>
             <p class="icon-box-text text-sm">We do branding for your social media, email templates, stationary, logos, cards, letter heads to build your identity and much more</p>
+            <a href="{{ url('services/design-brandeing-&-identity') }}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Optimize.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Optimize.png"></div>
             <h3 class="icon-box-title">OPTIMIZE</h3>
             <span>DESIGN, DEVELOPMENT & SEO</span>
             <p class="icon-box-text text-sm">Facing performance or optimization issues in your website? We can optimize your website as per your needs with latest functionalities.</p>
+            <a href="{{url('services/optimize-design-development-&-seo')}}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Android.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Android.png"></div>
             <h3 class="icon-box-title">Android</h3>
             <span>Develop, Upgrade & Modify App</span>
             <p class="icon-box-text text-sm">Looking to start a new venture? Our quality android application promises 99.9% uptime with unbeatable features pack can help you get there.</p>
+            <a href="{{url('services/android-develop-upgrade-modify-app')}}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Customization.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Customization.png"></div>
             <h3 class="icon-box-title">Customization</h3>
             <span>Plugin & Theme Development</span>
             <p class="icon-box-text text-sm">your business have some custom flow and you want to fullfil with custom wordpress plugin & theme then we can develop custom wordpress plugin & theme.</p>
+            <a href="{{ url('services/customization-plugins-theme-development') }}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Support.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Support.png"></div>
             <h3 class="icon-box-title">SUPPORT</h3>
             <span>SALES, BILLING & TICKETING</span>
             <p class="icon-box-text text-sm">Don’t hesitate to ask if you are facing any issue. We provide 24 hours support for your Website, Hosting, Content or Social Media related issues.</p>
+            <a href="{{ url('services/support-sales-billing-ticketing') }}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Social.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Social.png"></div>
             <h3 class="icon-box-title">SOCIAL</h3>
             <span>MANAGEMENT & MARKETING</span>
             <p class="icon-box-text text-sm">Want to promote your site in the social world? We provide social media marketing, management, and keep an eye on latest trends and techniques.</p>
+            <a href="{{ url('services/social-management-&-marketing') }}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="icon-box text-center mx-auto">
-            <div class="icon-box-icon"><img src="assets/img/Management.png"></div>
+            <div id="imb" class="icon-box-icon"><img src="assets/img/Management.png"></div>
             <h3 class="icon-box-title">MANAGEMENT</h3>
             <span>MONTHLY SERVICES</span>
             <p class="icon-box-text text-sm">We also manage sites for a full month. This management includes all services mentioned above. So you don’t need to do any work.</p>
+            <a href="{{ url('services/management-monthly-services') }}" class="icon-box-link">More Detail <i class="fe-icon-arrow-right"></i></a>
           </div>
         </div>
       </div>
     </section>
+
 
 
 
