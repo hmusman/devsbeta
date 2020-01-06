@@ -44,7 +44,7 @@ class contactusController extends Controller
     // dd([$name,$email,$subject,$uploadFile,$description]);
     	if($inserted){
     $comment = 'Your message is received, we will get back to you soon';
-    $toEmail = $request->email;
+    $toEmail = $request->email ;
     Mail::to($toEmail)->send(new FeedbackMail($comment));
    
     return redirect()->back()->with('message','Your message is received, we will get back to you soon')->with(compact('contents'));
