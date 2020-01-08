@@ -8,11 +8,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Portfolio;
 use App\Models\Sidebar;
 use App\Models\Category;
+use App\Models\Service;
 use DB;
 class portfolioController extends Controller
 {
    public  function index(Request $request,$name){
        
+      $services = Service::all();
       $result = Portfolio::where("name",urldecode($name))->first();
       $id = $result->id; 
       $single=Portfolio::find($id);       
@@ -32,13 +34,14 @@ class portfolioController extends Controller
         $next=Portfolio::find($id); 
       }
   
-      return view('Pages.portfolios',compact('single','portfolios','previous','next'));
+      return view('Pages.portfolios',compact('single','portfolios','previous','next','services'));
     }
 
     public function all(){
+      $services = Service::all();
       $categories=Category::all();
       $totalCategories=count($categories);
-      return view('Pages.portfoliomain',compact('categories','totalCategories'));
+      return view('Pages.portfoliomain',compact('categories','totalCategories','services'));
          
     }
     function load_data(Request $request){

@@ -132,9 +132,7 @@ Route::get('/contactus','Pages\contactusController@index');
 Route::post('/message','Pages\contactusController@message')->name('/message');
 //mail template
 Route::get('/send/send_feedback', 'Pages\contactusController@sendFeedback');
-Route::get('/', function () {
-    return view('Pages.index');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/about','Pages\aboutusController@index');
 Route::get('privacy-policy',function(){

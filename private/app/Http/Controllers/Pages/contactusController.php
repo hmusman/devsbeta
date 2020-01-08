@@ -8,14 +8,17 @@ use App\Models\Contact;
 use App\message;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\FeedbackMail;
+use App\Models\Service;
+
 class contactusController extends Controller
 {
     //
     public function index(){
 
          $contents=Contact::all();
-         
-    	return view('Pages.contactus',['contents'=>$contents,]);
+         $services = Service::all();
+
+    	return view('Pages.contactus',['contents'=>$contents,], compact('services'));
     }
 
     public function message(Request $request){
@@ -43,9 +46,9 @@ class contactusController extends Controller
     
     // dd([$name,$email,$subject,$uploadFile,$description]);
     	if($inserted){
-    $comment = 'Your message is received, we will get back to you soon';
-    $toEmail = $request->email ;
-    Mail::to($toEmail)->send(new FeedbackMail($comment));
+    // $comment = 'Your message is received, we will get back to you soon';
+    // $toEmail = $request->email ;
+    // Mail::to($toEmail)->send(new FeedbackMail($comment));
    
     return redirect()->back()->with('message','Your message is received, we will get back to you soon')->with(compact('contents'));
     	 }

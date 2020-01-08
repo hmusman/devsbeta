@@ -16,8 +16,12 @@ class serviceController extends Controller
 
     public function single_service($slug){
 
+        $services = Service::all();
         $service = Service::where('slug', $slug)->first();
-        return view('Pages.single-service', compact('service'));
+        return view('Pages.single-service', compact('service', 'services'));
+
+
+        
     }
     
     // public function image_tag($id){

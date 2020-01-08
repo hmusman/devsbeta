@@ -8,6 +8,8 @@ use Swis\LaravelFulltext\Search;
 use WebDevEtc\BlogEtc\Captcha\UsesCaptcha;
 use WebDevEtc\BlogEtc\Models\BlogEtcCategory;
 use WebDevEtc\BlogEtc\Models\BlogEtcPost;
+use App\Models\Service;
+
 
 /**
  * Class BlogEtcReaderController
@@ -44,11 +46,12 @@ class BlogEtcReaderController extends Controller
 
         $posts = $posts->orderBy("posted_at", "desc")
             ->paginate(config("blogetc.per_page", 10));
+        $services = Service::all();
 
         return view("Pages.blog", [
             'posts' => $posts,
             'title' => $title,
-        ]);
+        ], compact('services'));
     }
 
     /**
@@ -81,11 +84,12 @@ class BlogEtcReaderController extends Controller
             });
         }
         $posts = $query->paginate(10);
+        $services = Service::all();
         return view("Pages.blog", [
             'posts' => $posts,
             "search" => "true",
             "query" => $request->get("s"),
-        ]);
+        ],compact('services'));
 
     }
 
@@ -122,6 +126,7 @@ class BlogEtcReaderController extends Controller
         if ($captcha = $this->getCaptchaObject()) {
             $captcha->runCaptchaBeforeShowingPosts($request, $blog_post);
         }
+        $services = Service::all();
 
         return view("Pages.single-blog-post", [
             'post' => $blog_post,
@@ -132,7 +137,7 @@ class BlogEtcReaderController extends Controller
             'captcha' => $captcha,
             'previous' => $previous,
             'next' => $next,
-        ]);
+        ], compact('services'));
     }
 
 
