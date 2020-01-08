@@ -169,11 +169,7 @@
 			              <div class="card-body">
 			                <ul>
 			                  <li class="dropdown-header">Services we provide</li>
-				                  @forelse(Helper::our_services()->services as $service)
-									<li class="dropdown-item"><a href="{{ url('services') }}/{{$service->slug}}">{{$service->title}} {{$service->subtitle}}</a></li>
-								  @empty
-									<div class='alert alert-danger'>No services yet</div>
-		            			  @endforelse
+				                  <!-- helper code remove -->
 			                </ul>
 			              </div>
 			            </div>
@@ -244,11 +240,7 @@
 								<li class="nav-item mega-dropdown-toggle"><a class="nav-link drop" href="{{ url('services') }}">Services</a>
 								</li>
 								<div class="dropdown-content beauty">
-									@forelse(Helper::our_services()->services as $service)
-										<a href="{{ url('services') }}/{{$service->slug}}">{{$service->title}} {{$service->subtitle}}</a>
-									@empty
-										 <div class='alert alert-danger'>No services yet.</div>
-                    				@endforelse
+									<!-- helper code removed -->
 								</div>
 							</div>
 							
