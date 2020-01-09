@@ -17,3 +17,6 @@ NAH-Latest.zip
 #Ignore file named `office.zip`
 office.zip
 private/composer.json
+private/vendor.zip
+private/composer.zip
+private/private/images/1578505018_.png

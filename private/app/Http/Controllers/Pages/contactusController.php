@@ -16,10 +16,11 @@ class contactusController extends Controller
 {
     //
     public function index(){
-
-         $contents=Contact::all();
+        
          $services = Service::all();
 
+         $contents=Contact::all();
+         
     	return view('Pages.contactus',['contents'=>$contents,], compact('services'));
     }
 
@@ -57,8 +58,8 @@ class contactusController extends Controller
     $comment = 'Your message is received, we will get back to you soon';
     $toEmail = $request->email ;
     Mail::to($toEmail)->send(new FeedbackMail($comment));
-   
-    return redirect()->back()->with('message','Your message is received, we will get back to you soon')->with(compact('contents'));
+    $services = Service::all();
+    return redirect()->back()->with('message','Your message is received, we will get back to you soon')->with(compact('contents', 'services'));
     	 }
     }
 }
