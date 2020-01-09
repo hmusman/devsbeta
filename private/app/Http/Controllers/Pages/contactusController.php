@@ -9,6 +9,8 @@ use App\message;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\FeedbackMail;
 use App\Models\Service;
+use App\Rules\Captcha;
+use Illuminate\Support\Facades\Validator;
 
 class contactusController extends Controller
 {
@@ -36,6 +38,12 @@ class contactusController extends Controller
      $filename= "no-image.png";
      }
 
+     $rules = array(
+          'g-recaptcha-response' => new Captcha(),
+    );
+
+     $this->validate($request, $rules);
+
         $inserted=message::create(['name'=>$request->name,'email'=>$request->email,'subject'=>$request->subject,'uploadFile'=>$filename,'description'=>$request->description]);
       
     	/*$name=$request->name;
@@ -46,9 +54,9 @@ class contactusController extends Controller
     
     // dd([$name,$email,$subject,$uploadFile,$description]);
     	if($inserted){
-    // $comment = 'Your message is received, we will get back to you soon';
-    // $toEmail = $request->email ;
-    // Mail::to($toEmail)->send(new FeedbackMail($comment));
+    $comment = 'Your message is received, we will get back to you soon';
+    $toEmail = $request->email ;
+    Mail::to($toEmail)->send(new FeedbackMail($comment));
    
     return redirect()->back()->with('message','Your message is received, we will get back to you soon')->with(compact('contents'));
     	 }

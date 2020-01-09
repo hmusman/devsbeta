@@ -30,6 +30,7 @@
     <script src="{{url('assets/js/modernizr.min.js')}}"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125641826-2"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -200,7 +201,7 @@
                             <ul>
                                 <li class="dropdown-header">Services we provide</li>
                                 @foreach($services as $service)
-                                    <a href="{{url('services')}}/{{$service->slug}}">{{ $service->title }} {{ $service->subtitle }}</a>
+                                    <a class="dropdown-item" href="{{url('services')}}/{{$service->slug}}">{{ $service->title }} {{ $service->subtitle }}</a>
                                 @endforeach
                             </ul>
                         </div>

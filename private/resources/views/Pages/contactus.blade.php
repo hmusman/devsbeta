@@ -30,14 +30,14 @@
               <div class="col-sm-6">
                 <div class="form-group">
                   <label for="contact-name">Your Name <span class='text-danger font-weight-medium'>*</span></label>
-                  <input class="form-control" type="text" id="contact-name" name="name" placeholder="Your good name here" required>
+                  <input class="form-control" type="text" id="contact-name" name="name" placeholder="Your good name here" required value="{{ old('name') }}">
                   <div class="invalid-feedback">Please enter your name!</div>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <label for="contact-email">Your Email <span class='text-danger font-weight-medium'>*</span></label>
-                  <input class="form-control" type="email" id="contact-email" name="email" placeholder="abc@email.com" required>
+                  <input class="form-control" type="email" id="contact-email" name="email" placeholder="abc@email.com" required value="{{ old('email') }}">
                   <div class="invalid-feedback">Please provide a valid email address!</div>
                 </div>
               </div>
@@ -46,7 +46,7 @@
               <div class="col-sm-6">
                 <div class="form-group">
                   <label for="contact-subject">Subject</label>
-                  <input class="form-control" type="text" id="contact-subject" name="subject" placeholder="Provide short title of you request">
+                  <input class="form-control" type="text" id="contact-subject" name="subject" placeholder="Provide short title of you request" value="{{ old('subject') }}">
                 </div>
               </div>
               <div class="col-sm-6">
@@ -61,8 +61,16 @@
             </div>
             <div class="form-group">
               <label for="contact-message">Message <span class='text-danger font-weight-medium'>*</span></label>
-              <textarea class="form-control" rows="7" id="contact-message" placeholder="Let us know more what's on your mind..." name="description" required></textarea>
+              <textarea class="form-control" rows="7" id="contact-message" placeholder="Let us know more what's on your mind..." name="description" value="{{ old('description') }}" required></textarea>
               <div class="invalid-feedback">Please write a message!</div>
+            </div>
+            <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="{{ env('CAPTCHA_KEY') }}"></div>
+                @if($errors->has('g-recaptcha-response'))
+                    <span class="invalid-feedback" style="display: block;">
+                      <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                    </span>
+                @endif
             </div>
             <div class="text-center">
               <button class="btn btn-primary" type="submit">Send Message</button>

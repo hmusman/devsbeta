@@ -16,3 +16,4 @@ latest-dev-backup.zip
 NAH-Latest.zip
 #Ignore file named `office.zip`
 office.zip
+private/composer.json
