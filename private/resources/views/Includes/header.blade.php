@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+     <link rel="icon" type="image/png" sizes="16x16" href="{{url('assets/img/logo/db-logo.png')}}">
     <title>Best Web Design and Web Development Company | @yield('title')</title>
     <meta name="description"
         content="Our professional team converts your ideas into a brand with their skills. We offer web development, web & graphic designing, Application development, SEO services & IT.">
@@ -137,6 +137,9 @@
 .icon-box a:hover {
     color: #1AA687;
 }
+/* .icon-box .icon-box-link {
+  
+ } */
 </style>
 
 <body>
@@ -273,9 +276,15 @@
                             @endif
                         </li>
                         <div class="dropdown">
+                            @if(Request::is('services'))
+                            <li class="nav-item mega-dropdown-toggle active"><a class="nav-link drop"
+                                    href="{{ url('services') }}">Services</a>
+                            </li>
+                            @else
                             <li class="nav-item mega-dropdown-toggle"><a class="nav-link drop"
                                     href="{{ url('services') }}">Services</a>
                             </li>
+                            @endif
                             <div class="dropdown-content beauty">
                                 @foreach($services as $service)
                                     <a href="{{url('services')}}/{{$service->slug}}">{{ $service->title }} {{ $service->subtitle }}</a>
